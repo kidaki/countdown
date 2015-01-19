@@ -5,11 +5,11 @@ var montharray = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug
 
 function countdown(yr, m, d) {
     setInterval(function(){
-        console.log(  "Only " + 
+        document.getElementById('countdown').innerHTML = ( "Only " + 
                 Math.floor(((Date.parse(new Date(yr,m-1,d))) - Date.now())/(1000*60*60*24))    + 
-                "days, " + 
+                " days, " + 
                 Math.floor(((((Date.parse(new Date(yr,m-1,d))) - Date.now())/(1000*60*60*24))%1)*24)   + 
-                "hours, " + 
+                " hours, " + 
                 Math.floor(((((((Date.parse(new Date(yr,m-1,d))) - Date.now())/(1000*60*60*24))%1)*24)%1)*60) + 
                 " minutes, " + 
                 Math.floor(((((((((Date.parse(new Date(yr,m-1,d))) - Date.now())/(1000*60*60*24))%1)*24)%1)*60)%1)*60) + 
